@@ -8,7 +8,8 @@
   <form (ngSubmit)="add()">
     <ion-textarea label="Message" name="message" [(ngModel)]="post.message"></ion-textarea>
     <ion-input label="Author" name="author" [(ngModel)]="post.author"></ion-input>
-
+    <ion-button (click)="takePicture()">Take Picture</ion-button>
+    <ion-img *ngIf="post.picture" [src]="'data:image/jpg;base64,'+post.picture" />
     <ion-button type="submit" [disabled]="!post.latitude">Add</ion-button>
   </form>
   
