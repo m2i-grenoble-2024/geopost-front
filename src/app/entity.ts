@@ -8,7 +8,7 @@ export interface Post {
     latitude:number;
     longitude:number;
     message:string;
-    postedAd:string|Date;
+    postedAt?:string|Date;
     author?:string;
     category?:Category;
     picture?:string;
