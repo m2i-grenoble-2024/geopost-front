@@ -9,7 +9,7 @@
     <ion-textarea label="Message" name="message" [(ngModel)]="post.message"></ion-textarea>
     <ion-input label="Author" name="author" [(ngModel)]="post.author"></ion-input>
 
-    <ion-button type="submit">Add</ion-button>
+    <ion-button type="submit" [disabled]="!post.latitude">Add</ion-button>
   </form>
   
 </ion-content>
