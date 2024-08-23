@@ -9,6 +9,11 @@ export class PostService {
 
   constructor(private http:HttpClient) { }
 
+
+  fetchAll() {
+    return this.http.get<Post[]>('http://localhost:8000/api/post');
+  }
+
   persist(post:Post) {
     return this.http.post<Post>('http://localhost:8000/api/post',post);
   }
