@@ -15,4 +15,8 @@ export const routes: Routes = [
     path: 'add-post',
     loadComponent: () => import('./add-post/add-post.page').then( m => m.AddPostPage)
   },
+  {
+    path: 'map',
+    loadComponent: () => import('./map/map.page').then( m => m.MapPage)
+  },
 ];

@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { IonApp, IonSplitPane, IonMenu, IonContent, IonList, IonListHeader, IonNote, IonMenuToggle, IonItem, IonIcon, IonLabel, IonRouterOutlet, IonRouterLink } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
-import { mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, heartOutline, heartSharp, archiveOutline, archiveSharp, trashOutline, trashSharp, warningOutline, warningSharp, bookmarkOutline, bookmarkSharp, createOutline, createSharp } from 'ionicons/icons';
+import { createOutline, createSharp, mapOutline, mapSharp } from 'ionicons/icons';
 
 @Component({
   selector: 'app-root',
@@ -15,8 +15,9 @@ import { mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, heartOutlin
 export class AppComponent {
   public appPages = [
     { title: 'Add a Post', url: '/add-post', icon: 'create' },
+    {title:'Post Map', url:'/map', icon:'map'}
   ];
   constructor() {
-    addIcons({ createOutline, createSharp });
+    addIcons({ createOutline, createSharp, mapOutline,mapSharp });
   }
 }
